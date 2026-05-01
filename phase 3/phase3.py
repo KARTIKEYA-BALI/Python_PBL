@@ -1,5 +1,4 @@
 import joblib
-import joblib
 import nltk
 import regex as re
 from nltk.tokenize import word_tokenize
@@ -30,24 +29,8 @@ s = input("enter your email: ")
 
 x = tfidf.transform([s])
 k = model.predict(x)
-print(k)
+
 if k[0] == 1:
-    print("the email might be spam")
+    print("\n\n\nTHE EMAIL MIGHT BE SPAM")
 else:
-    print("the email might not be spam")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print("\n\n\nTHE EMAIL MIGHT NOT BE SPAM")
